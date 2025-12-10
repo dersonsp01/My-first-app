@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High School Romance – Official Website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f7f2f5;
+    overflow-x: hidden;
+}
+
+/* Header Banner */
+header {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Dark overlay for readability */
+header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px #ddd;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    color: #ff3d7f;
+    font-size: 24px;
+    animation: floatUp 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 0.8; }
+    100% { transform: translateY(-800px); opacity: 0; }
+}
+
+/* Buttons */
+.button {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    width: 80%;
+    margin: 25px auto;
+    background: #1877f2;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.button:hover {
+    background: #0f5cca;
+    transform: scale(1.05);
+}
+
+/* Episodes Section */
+.episode {
+    background: #ffe6ef;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Character Cards */
+.character {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 0 8px #ddd;
+}
+
+/* Slideshow */
+.slideshow img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* Comments Box */
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER WITH YOUR IMAGE -->
+<header style="background-image: url('data:image/jpeg;base64,
+/9j/4AAQSkZJRgABAQAAAQABAAD/...');
+">
+    <h1>High School Romance</h1>
+</header>
+
+<!-- BACKGROUND MUSIC -->
+<audio autoplay loop>
+    <source src="https://files.catbox.moe/5j8f1w.mp3" type="audio/mpeg">
+</audio>
+
+<!-- FLOATING HEARTS SCRIPT -->
+<script>
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = (Math.random()*3 + 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => { heart.remove(); }, 5000);
+}
+setInterval(createHeart, 500);
+</script>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+<h2 style="text-align:center;color:#ff3d7f;">Welcome to High School Romance ❤️</h2>
+<p style="text-align:center;">
+A world of love, youth, emotions, and unforgettable high-school memories.
+Follow our Facebook page for daily updates and new episodes!
+</p>
+
+<a class="button" href="https://www.facebook.com/share/1SZ2EUrvJm/" target="_blank">
+🌸 Visit Facebook Page
+</a>
+
+<hr>
+
+<h2>📖 Episodes</h2>
+
+<div class="episode">
+    <h3>Episode 1 – When Our Worlds Met</h3>
+    <p>The unexpected encounter that started it all…</p>
+</div>
+
+<div class="episode">
+    <h3>Episode 2 – A Smile Worth Remembering</h3>
+    <p>He couldn’t forget the shy smile she gave him that morning...</p>
+</div>
+
+<div class="episode">
+    <h3>Episode 3 – Secrets of the Hallways</h3>
+    <p>Rumors spread, feelings grow deeper, and friendships are tested.</p>
+</div>
+
+<hr>
+
+<h2>🎭 Meet the Characters</h2>
+
+<div class="character">
+    <h3>🌺 The Girl</h3>
+    <p>Smart, shy, but full of love she hides behind her smile.</p>
+</div>
+
+<div class="character">
+    <h3>🏀 The Boy</h3>
+    <p>Popular, confident, a basketball star — but soft inside.</p>
+</div>
+
+<hr>
+
+<h2>🎞️ Slideshow</h2>
+<div class="slideshow">
+    <img src="data:image/jpeg;base64,/9j/...">
+    <img src="data:image/jpeg;base64,/9j/...">
+</div>
+
+<hr>
+
+<h2>💬 Leave a Comment</h2>
+<textarea placeholder="Write something..."></textarea>
+<a class="button" href="#">Post Comment</a>
+
+</div>
+
+<footer>
+    © 2025 High School Romance. All Rights Reserved.
+</footer>
+
+</body>
+</html>
